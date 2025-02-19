@@ -10,7 +10,7 @@
 
   <groupId>com.example.maven-project</groupId>
   <artifactId>maven-project</artifactId>
-  <packaging>pom</packaging>
+  <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>Maven Project</name>
   <description>Sample Maven project with a working, deployable site.</description>
@@ -43,6 +43,15 @@
             <configuration>
                 <source>11</source>
                 <target>11</target>
+            </configuration>
+        </plugin>
+             <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.3.1</version>
+            <configuration>
+                <!-- Add any necessary configuration here -->
+                <failOnMissingWebXml>false</failOnMissingWebXml>
             </configuration>
         </plugin>
 
